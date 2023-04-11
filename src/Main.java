@@ -1,9 +1,9 @@
-import _202304._10.Solution1;
+import _202304._11.Solution1;
 
 public class Main {
     public static void main(String[] args) {
         Solution1 s = new Solution1();
-        System.out.println(s.solution(new int[][]{{1,0,1,1,1}, {1,0,1,0,1}, {1,0,1,1,1}, {1,1,1,0,1}, {0,0,0,0,1}}));
-        System.out.println(s.solution(new int[][]{{1,0,1,1,1}, {1,0,1,0,1}, {1,0,1,1,1}, {1,1,1,0,0}, {0,0,0,0,1}}));
+        System.out.println(s.solution(2, new String[] {"N~F=0", "R~T>2"}));
+        System.out.println(s.solution(2, new String[] {"M~C<2", "C~M>1"}));
     }
 }
