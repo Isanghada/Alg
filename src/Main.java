@@ -1,9 +1,10 @@
-import _202304._11.Solution1;
+import _202304._12.Solution1;
+
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         Solution1 s = new Solution1();
-        System.out.println(s.solution(2, new String[] {"N~F=0", "R~T>2"}));
-        System.out.println(s.solution(2, new String[] {"M~C<2", "C~M>1"}));
+        System.out.println(Arrays.toString(s.solution(6, 4, new int[][] {{1, 1, 1, 0}, {1, 2, 2, 0}, {1, 0, 0, 1}, {0, 0, 0, 1}, {0, 0, 0, 3}, {0, 0, 0, 3}})));
     }
 }
