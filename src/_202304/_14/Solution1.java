@@ -5,8 +5,8 @@ public class Solution1 {
         long answer = 0;
 
         for(int i = 0; i <= d; i += k){
-            long d2 = d * d;
-            long i2 = i * i;
+            long d2 = (long)d * d;
+            long i2 = (long)i * i;
             int top = (int) Math.sqrt(d2 - i2);
             answer += (top / k) + 1;
         }
