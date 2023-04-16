@@ -1,11 +1,8 @@
-import _202304._15.Solution1;
-
-import java.util.Arrays;
+import _202304._16_Solution_1;
 
 public class Main {
     public static void main(String[] args) {
-        Solution1 s = new Solution1();
-        System.out.println(s.solution(7, 3, new int[]{4, 2, 4, 5, 3, 3, 1}));
-        System.out.println(s.solution(2, 4, new int[]{3, 3, 3, 3}));
+        _16_Solution_1 s = new _16_Solution_1();
+        System.out.println(s.solution(new int[][] {{2,2,6}, {1,5,10}, {4,2,9}, {3,8,3}}, 2, 2, 3));
     }
 }
