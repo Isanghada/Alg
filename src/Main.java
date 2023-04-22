@@ -1,12 +1,11 @@
-import _202304._20_Solution_1;
+import _202304._22_Solution_1;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        _20_Solution_1 s = new _20_Solution_1();
-        System.out.println(s.solution(10, 40, 5));
-        System.out.println(s.solution(10, 40, 30));
-        System.out.println(s.solution(2, 5, 4));
+        _22_Solution_1 s = new _22_Solution_1();
+        System.out.println(Arrays.toString(s.solution(new int[] {2, 3, 3, 5})));
+        System.out.println(Arrays.toString(s.solution(new int[] {9, 1, 5, 3, 6, 2})));
     }
 }
