@@ -5,7 +5,7 @@ public class _27_Solution_1 {
         // 정답 초기화
         int[] answer = new int[]{-1, -1};
 
-        // 배열의 길이
+        // 배열의 길이222
         int n = sequence.length;
 
         int left = 0;   // 왼쪽 포인터
