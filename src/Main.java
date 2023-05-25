@@ -1,14 +1,10 @@
-import _202305._24_Solution_2;
+import _202305._25_Solution_1;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        _24_Solution_2 s = new _24_Solution_2();
-        System.out.println(s.solution(2, 3));
-        System.out.println(s.solution(2, 4));
-        System.out.println(s.solution(9, 20));
-        System.out.println(s.solution(10, 20));
-        System.out.println(s.solution(999999, 1000000));
+        _25_Solution_1 s = new _25_Solution_1();
+        System.out.println(s.solution(new int[][] {{4,5}, {4,8}, {10,14}, {11,13}, {5,12}, {3,7}, {1,4}}));
     }
 }
