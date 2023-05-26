@@ -1,10 +1,10 @@
-import _202305._25_Solution_1;
-
-import java.util.Arrays;
+import _202305._26_Solution_1;
 
 public class Main {
     public static void main(String[] args) {
-        _25_Solution_1 s = new _25_Solution_1();
-        System.out.println(s.solution(new int[][] {{4,5}, {4,8}, {10,14}, {11,13}, {5,12}, {3,7}, {1,4}}));
+        _26_Solution_1 s = new _26_Solution_1();
+        System.out.println(s.solution(4, 5, new int[] {1, 0, 3, 1, 2}, new int[] {0, 3, 0, 4, 0}));
+        System.out.println(s.solution(2, 7, new int[] {1, 0, 2, 0, 1, 0, 2}, new int[] {0, 2, 0, 1, 0, 2, 0}));
+        System.out.println(s.solution(2, 7, new int[] {0, 0, 0, 0, 0, 0, 0}, new int[] {0, 0, 0, 0, 0, 0, 0}));
     }
 }
