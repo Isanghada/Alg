@@ -32,12 +32,15 @@ public class _23_Solution_1 {
         return net.size();
     }
 
+    // 재귀를 통해 부모 정점이 자기 자신인 경우 찾기
     public static int  find(int[] parent, int x){
         if (parent[x] != x)
             parent[x] = find(parent, parent[x]);
         return parent[x];
     }
 
+    // a, b를 서로 연결시켜주는 작업.
+    // 부모 정점을 똑같이 설정.
     public static void union(int[] parent, int a, int b){
         a = find(parent, a);
         b = find(parent, b);
