@@ -1,12 +1,13 @@
-import _202308._28_Solution_1;
+import _202308._29_Solution_1;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        _28_Solution_1 s = new _28_Solution_1();
-        System.out.println(Arrays.toString(s.solution(21)));
-        System.out.println(Arrays.toString(s.solution(58)));
-//        System.out.println(s.solution(new int[] {14, 17, 15, 18, 19, 14, 13, 16, 28, 17}, new int[][] {{10, 8}, {1, 9}, {9, 7}, {5, 4}, {1, 5}, {5, 10}, {10, 6}, {1, 3}, {10, 2}}));
+        _29_Solution_1 s = new _29_Solution_1();
+//        System.out.println(Arrays.toString(s.solution(21)));
+//        System.out.println(Arrays.toString(s.solution(58)));
+        System.out.println(s.solution(3, 5, new int[][] {{10, 60, 1}, {15, 100, 3}, {20, 30, 1}, {30, 50, 3}, {50, 40, 1}, {60, 30, 2}, {65, 30, 1}, {70, 100, 2}}));
+        System.out.println(s.solution(2, 3, new int[][] {{5, 55, 2}, {10, 90, 2}, {20, 40, 2}, {50, 45, 2}, {100, 50, 2}}));
     }
 }
