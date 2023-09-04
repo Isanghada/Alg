@@ -1,17 +1,16 @@
 package _202309;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/15486
 // - Bottom-Up 방식의 DP
 // - 1일차부터 얻을 수 있는 최대값 계산
-public class _03_Solution_1 {
+public class _04_Solution_1 {
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        // System.setIn(new FileInputStream("src/_202309/_03_input.txt"));
+        // System.setIn(new FileInputStream("src/_202309/_04_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();
