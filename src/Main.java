@@ -2,9 +2,8 @@ import _202309.*;
 
 public class Main {
     public static void main(String[] args) {
-        _17_Solution_1 s = new _17_Solution_1();
+        _18_Solution_1 s = new _18_Solution_1();
 //        System.out.println(Arrays.toString(s.solution()));
-        System.out.println(s.solution(12, new int[] {1, 5, 6, 10}, new int[] {1, 2, 3, 4}));
-        System.out.println(s.solution(12, new int[] {1, 3, 4, 9, 10}, new int[] {3, 5, 7}));
+        System.out.println(s.solution(new int[][] {{0, 3, 3, 0}, {3, 2, 2, 3}, {0, 3, 2, 0}, {0, 3, 3, 3}}));
     }
 }
