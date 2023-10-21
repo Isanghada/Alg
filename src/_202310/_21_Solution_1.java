@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 // https://www.acmicpc.net/problem/2087
-// - 비트 마스킹 활용
+// - 비트 마스킹과 이분 탐색 활용. => 투 포인터를 활용했어도 좋았을거 같다
 // - 전체를 한 번에 계산하면 2^40이 되니 이를 반으로 나누어 진행
 // - bit 수를 절반으로 나누어 A, B로 나누고 식을 (K = At + Bt) => (K - Bt) = At 으로 변환.
 // - 최대 비트수는 2^20 = 1048576
