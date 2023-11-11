@@ -22,24 +22,30 @@ public class _05_Solution_1 {
 
         // DP 초기화
         // - 계산의 편의를 위해 인덱스를 1부터 시작!
-        dp = new int[B.length][A.length];
-//        for(int b = 1; b < B.length; b++){
-//            for(int a = 1; a < A.length; a++){
-//                dp[b][a] = Math.max(dp[b][a-1], dp[b-1][a]);
-//                if(B[b] == A[a]) dp[b][a] = Math.max(dp[b][a], dp[b-1][a-1] + 1);
-//            }
-//        }
+        int[][][] dp = new int[2][B.length][A.length];
+        for(int b = 1; b < B.length; b++){
+            for(int a = 1; a < A.length; a++){
+                dp[0][b][a] = Math.max(dp[0][b][a-1], dp[0][b-1][a]);
+                dp[1][b][a] = dp[0][b-1][a-1] + 1;
+                if(B[b] == A[a]) {
+                    dp[0][b][a] = Math.max(dp[0][b][a], dp[0][b-1][a-1] + 1);
+                    dp[1][b][a] = Math.max(dp[1][b][a], dp[1][b-1][a-1] + 1);
+                }
+            }
+        }
+        sb.append(Math.max(dp[0][B.length-1][A.length-1],dp[1][B.length-1][A.length-1]))
+                .append("\n").append(dp[0][B.length-1][A.length-1])
+                .append("\n").append(dp[1][B.length-1][A.length-1]);
 
         // 값을 -1로 초기화
-        for(int b = 1; b < B.length; b++){
-            for(int a = 1; a < A.length; a++)
-                dp[b][a] = -1;
-        }
-
-        // 정답 반환 : lcs 함수를 통해 재귀 방식으로 계산
-//        sb.append(dp[B.length-1][A.length-1]);
-        sb.append(lcs(A, B, A.length-1, B.length-1));
-        for(int[] d : dp) System.out.println(Arrays.toString(d));
+//        for(int b = 1; b < B.length; b++){
+//            for(int a = 1; a < A.length; a++)
+//                dp[b][a] = -1;
+//        }
+//
+//        // 정답 반환 : lcs 함수를 통해 재귀 방식으로 계산
+//        sb.append(lcs(A, B, A.length-1, B.length-1));
+//        for(int[] d : dp) System.out.println(Arrays.toString(d));
 
         System.out.println(sb);
 
