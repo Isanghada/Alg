@@ -25,8 +25,14 @@ public class _05_Solution_1 {
         int[][][] dp = new int[2][B.length][A.length];
         for(int b = 1; b < B.length; b++){
             for(int a = 1; a < A.length; a++){
+                // B[b]와 A[a]를 비교하지 않는 경우 중 최대값 계산
                 dp[0][b][a] = Math.max(dp[0][b][a-1], dp[0][b-1][a]);
-                dp[1][b][a] = dp[0][b-1][a-1] + 1;
+                // B[b]와 A[a]를 비교하지 않는 경우 중 최대값 계산
+                dp[1][b][a] = Math.max(dp[1][b][a-1], dp[1][b-1][a]);
+                // A[a]를 B[b]로 강제로 변경하는 경우 중 최대값 계산
+                dp[1][b][a] = Math.max(dp[1][b][a], dp[0][b-1][a-1] + 1);
+                // B[b]와 A[a]가 동일한 경우
+                // - DP(b-1, a-1) + 1 중 최대값 계산
                 if(B[b] == A[a]) {
                     dp[0][b][a] = Math.max(dp[0][b][a], dp[0][b-1][a-1] + 1);
                     dp[1][b][a] = Math.max(dp[1][b][a], dp[1][b-1][a-1] + 1);
