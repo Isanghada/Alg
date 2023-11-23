@@ -3,73 +3,59 @@ package _202311;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
-// https://www.acmicpc.net/problem/2313
-// - 각 보석 라인별로 DP를 통해 최대 가치 게산
+// https://www.acmicpc.net/problem/4811
+// - DP를 활용해 해결
+// - [큰 알약의 수][작은 알약의 수]일 경우의 경우의 수 계산
 public class _22_Solution_1 {
+    public static long[][] dp;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
         System.setIn(new FileInputStream("src/_202311/_22_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = null;
+//        StringTokenizer st = new StringTokenizer(in.readLine());
         StringBuilder sb = new StringBuilder();
 
-        // 보석 라인 수
-        int N = Integer.parseInt(in.readLine());
-        // 가치의 합
-        long total = 0;
-        // 보석 라인마다 반복
-        for(int i = 0; i < N; i++){
-            // 보석의 수
-            int L = Integer.parseInt(in.readLine());
-            // 보석 가치 배열
-            int[] jewelry = Arrays.stream(in.readLine().split(" ")).mapToInt(Integer::new).toArray();
+        // 30개의 알약일 경우까지 모두 계산!
+        dp = new long[31][31];
+        dp[0][0] = 1;   // 0개인 경우의 수
+        dp[1][0] = 1;   // 1개인 경우의 수
+        dp[2][0] = 2;   // 2개인 경우의 수
 
-            // 최대 보석 가치
-            int sum = jewelry[0];
-            // 최대 보석 가치일 경우의 범위
-            int sumStart = 0, sumEnd = 0;
-            // 현재 범위
-            int start = 0, end = 0;
+        // DP 계산
+        calculateDP(30, 0);
 
-            // 차례로 계산
-            for(int idx = 1; idx < L; idx++){
-                // 현재 보석의 가치가 이전 보석 가치와의 합 이상일 경우
-                if(jewelry[idx] >= jewelry[idx-1] + jewelry[idx]){
-                    // 현재 가치로 범위 변경!
-                    start = idx;
-                    end = idx;
-                // 아닐 경우
-                }else{
-                    // 이전 가치와 합
-                    jewelry[idx] = jewelry[idx-1] + jewelry[idx];
-                    end = idx;
-                }
-
-                //sum보다 현재 보석 가치가 높을 경우
-                if(jewelry[idx] > sum){
-                    // sum 변경
-                    sum = jewelry[idx];
-                    // 범위 변경
-                    sumStart = start;
-                    sumEnd = end;
-                // 값이 같고 범위가 더 작을 경우
-                }else if(jewelry[idx] == sum && sumEnd - sumStart > end - start){
-                    // 범위 변경
-                    sumStart = start;
-                    sumEnd = end;
-                }
-            }
-            // 최대 가치만큼 증가
-            total += sum;
-            // 범위를 StringBuilder에 추가
-            sb.append(sumStart+1).append(" ").append(sumEnd+1).append("\n");
+        // 테스트 케이스 반복!
+        while(true){
+            // 알약의 수 입력
+            int N = Integer.parseInt(in.readLine());
+            // 0인 경우 종료
+            if(N == 0) break;
+            // 계산된 값 반환
+            sb.append(dp[N][0]).append("\n");
         }
 
         // 정답 출력
-        System.out.println(total);
         System.out.println(sb);
+    }
+
+    // DP 계산 함수
+    // - big : 큰 알약의 수
+    // - small : 작은 알약의 수
+    private static long calculateDP(int big, int small) {
+        // 큰 알약이 없는 경우 남은 경우의 수는 1
+        if(big == 0) return 1;
+        // 0이 아닌 경우 : 이미 계산된 경우 이므로 값 반환
+        if(dp[big][small] != 0) return dp[big][small];
+
+        // 경우의 수 계산
+        long count = 0;
+        // 큰 알약을 사용할 경우의 수 계산
+        count += calculateDP(big-1, small+1);
+        // 작은 알약을 사용할 경우의 수 계산(단, 작은 알약이 있는 경우)
+        if(small != 0) count += calculateDP(big, small-1);
+
+        // 계산된 경우의 수 반환
+        return dp[big][small] = count;
     }
 }
