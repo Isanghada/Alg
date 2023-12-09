@@ -32,9 +32,9 @@ public class _09_Solution_1 {
             // diff을 N 재곱 만큼 감소!
             diff -= N*N;
             while(diff > 0){
-                for(long i = N; i >= 1; i--){
-                    if(i < diff){
-                        answer++;
+                for(long i = N; 1<=i; i--){
+                    if(i<=diff){
+                        answer+=1;
                         diff -= i;
                         break;
                     }
