@@ -35,7 +35,7 @@ public class _09_Solution_1 {
                 for(long i = N; i >= 1; i--){
                     if(i < diff){
                         answer++;
-                        diff--;
+                        diff -= i;
                         break;
                     }
                 }
