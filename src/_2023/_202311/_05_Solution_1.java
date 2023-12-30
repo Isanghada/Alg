@@ -10,7 +10,7 @@ public class _05_Solution_1 {
     private static int[][] dp;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202311/_05_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202311/_05_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

@@ -19,7 +19,7 @@ public class _27_Solution_1 {
     public static int answer;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202310/_27_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202310/_27_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

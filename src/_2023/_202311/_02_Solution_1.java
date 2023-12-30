@@ -36,7 +36,7 @@ public class _02_Solution_1 {
     }
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202311/_02_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202311/_02_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();

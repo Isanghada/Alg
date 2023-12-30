@@ -24,7 +24,7 @@ public class _17_Solution_1 {
     public static int[] parents;    // 도시의 부모 노드
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202310/_17_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202310/_17_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(in.readLine());
         StringBuilder sb = new StringBuilder();

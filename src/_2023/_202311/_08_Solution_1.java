@@ -11,7 +11,7 @@ public class _08_Solution_1 {
     public static String S;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202311/_08_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202311/_08_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

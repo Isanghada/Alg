@@ -12,7 +12,7 @@ public class _22_Solution_1 {
     public static final int MOD = 1000000007;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202312/_22_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202312/_22_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

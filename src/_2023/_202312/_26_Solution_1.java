@@ -25,7 +25,7 @@ public class _26_Solution_1 {
     public static boolean[][] VISITED;  // 방문 배열
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202312/_26_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202312/_26_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

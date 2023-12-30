@@ -21,7 +21,7 @@ public class _23_Solution_1 {
     public static List<Integer>[] adjList;
     public static void main(String[] args) throws Exception {
         // 텍스트 파일로 입력을 받도록 설정
-        System.setIn(new FileInputStream("src/_2023._202308/_23_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202308/_23_input.txt"));
 
         // 입력, 출력 설정
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

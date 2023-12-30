@@ -14,7 +14,7 @@ public class _20_Solution_1 {
     public static char[][] BOARD;
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202311/_20_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202311/_20_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(in.readLine());
         StringBuilder sb = new StringBuilder();

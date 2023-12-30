@@ -11,7 +11,7 @@ public class _11_Solution_1 {
     public static final String PATTERN = "((100+1+)|(01))+";
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202312/_11_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202312/_11_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 

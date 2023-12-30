@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 public class _17_Solution_1 {
     public static void main(String[] args) throws Exception {
         // 입출력 설정
-        System.setIn(new FileInputStream("src/_2023._202311/_17_input.txt"));
+        System.setIn(new FileInputStream("src/_2023/_202311/_17_input.txt"));
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = null;
         StringBuilder sb = new StringBuilder();
