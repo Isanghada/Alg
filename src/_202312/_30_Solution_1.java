@@ -118,7 +118,8 @@ public class _30_Solution_1 {
                 // - 범위를 벗어나는 경우
                 // - 다음 좌표의 높이가 현재 높이보다 작을 경우
                 if(next.row < 1 || next.row > N || next.col < 1 || next.col > M ||
-                MAP[next.row][next.col] < cur.height) continue;
+                        VISITED[next.row][next.col] ||
+                        MAP[next.row][next.col] < cur.height) continue;
 
                 // 다음 좌표 높이 설정
                 next.height = MAP[next.row][next.col];
