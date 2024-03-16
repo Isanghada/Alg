@@ -48,29 +48,32 @@ public class _16_Solution_1 {
                 boolean flag = false;
 //                System.out.println(command[1]);
 //                System.out.println(arrCount);
-                // x가 0이고, 0이 있는 경우 true 변환
-                if(command[1] == 0 && arrCount.getOrDefault(0, 0) > 0) flag = true;
-                // 1부터 limit까지 탐색
-                for(int i = 1; i <= limit; i++){
-                    // x가 i로 나누어 떨어지는 경우
-                    if(command[1] % i == 0){
-                        // 대응되는 j 계산
-                        int j = command[1] / i;
+                // 수열 크기가 2 이상인 경우만 탐색 가능
+                if(N > 1){
+                    // x가 0이고, 0이 있는 경우 true 변환
+                    if(command[1] == 0 && arrCount.getOrDefault(0, 0) > 0) flag = true;
+                    // 1부터 limit까지 탐색
+                    for(int i = 1; i <= limit; i++){
+                        // x가 i로 나누어 떨어지는 경우
+                        if(command[1] % i == 0){
+                            // 대응되는 j 계산
+                            int j = command[1] / i;
 //                        System.out.println(i+", "+j);
 
-                        // i, j가 동일한 경우 : i가 2개 이상인지 확인
-                        if(i == j){
-                            if(arrCount.getOrDefault(i, 0) > 1){
-                                flag = true;
-                                break;
-                            }
-                        // i, j가 다른 경우 : i, j가 각각 1개 이상인지 확인
-                        }else{
-                            if(arrCount.getOrDefault(i, 0) > 0 &&
-                                    arrCount.getOrDefault(j, 0) > 0
-                            ){
-                                flag = true;
-                                break;
+                            // i, j가 동일한 경우 : i가 2개 이상인지 확인
+                            if(i == j){
+                                if(arrCount.getOrDefault(i, 0) > 1){
+                                    flag = true;
+                                    break;
+                                }
+                                // i, j가 다른 경우 : i, j가 각각 1개 이상인지 확인
+                            }else{
+                                if(arrCount.getOrDefault(i, 0) > 0 &&
+                                        arrCount.getOrDefault(j, 0) > 0
+                                ){
+                                    flag = true;
+                                    break;
+                                }
                             }
                         }
                     }
