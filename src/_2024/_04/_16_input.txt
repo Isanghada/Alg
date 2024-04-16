@@ -1,0 +1,9 @@
+2
+3
+ABC
+ABD
+XY
+3
+ABC
+XC
+DZ
