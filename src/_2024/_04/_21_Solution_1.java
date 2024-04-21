@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-// https://www.acmicpc.net/problem/12919
+// https://www.acmicpc.net/problem/20164
 // - 브루트포스 : 모든 경우를 탐색하여 최소값, 최대값 계산
 public class _21_Solution_1 {
     private static int MAX; // 최대값
