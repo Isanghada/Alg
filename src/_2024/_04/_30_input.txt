@@ -1,0 +1,5 @@
+4
+1 od 4 jedan
+2 od 3 dva tri
+1 od 1 cetiri
+1 od 4 dva
