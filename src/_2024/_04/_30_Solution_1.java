@@ -45,7 +45,6 @@ public class _30_Solution_1 {
                 }
             }
         }
-
         // 각 순위를 체크하여 1개의 음악만 포함된 경우 출력
         int count = 0;  // 현재까지 순위에 포함된 노래의 수!
         for(int rank = 1; rank < 101; rank++){
