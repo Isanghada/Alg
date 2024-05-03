@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-// https://www.acmicpc.net/problem/12931
+// https://www.acmicpc.net/problem/3096
 // - 조합 : 왼쪽 마을 2개를 선택하고 조합 가능한 오른쪽 마을 개수 계산
 public class _04_Solution_1 {
     public static void main(String[] args) throws Exception {
