@@ -42,7 +42,7 @@ public class _16_Solution_1 {
         }
 
         // 정답 출력
-        sb.append(answer);
+        sb.append(((answer == LIMIT) ? -1 : answer));
         System.out.println(sb);
     }
 
