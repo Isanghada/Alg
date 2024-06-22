@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/2288
-// -
+// - 참고 : https://namhoon.kim/2022/10/24/ps_boj/2288/index.html
 public class _22_Solution_1 {
     static int N, M, INIT = -1, LEFT = 0, RIGHT = 1;
     static char[][] BOARD;
