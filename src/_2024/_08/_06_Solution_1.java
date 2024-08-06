@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.acmicpc.net/problem/1148
-// -
+// - 구현 : 알파벳의 개수를 계산하여 차례로 확인!
 public class _06_Solution_1 {
     public static void main(String[] args) throws Exception {
         // 입출력 설정
@@ -15,15 +15,22 @@ public class _06_Solution_1 {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
+        // 단어 리스트
         List<int[]> countOfAlp = getInput(in);
+        // 퍼즐 리스트
         List<int[]> countOfPuzzle = getInput(in);
 
+        // 퍼즐 마다 진행!
         for(int[] puzzle : countOfPuzzle){
+            // 최소 결과
             StringBuilder minAlp = new StringBuilder();
-            StringBuilder maxAlp = new StringBuilder();
             int min = Integer.MAX_VALUE;
+
+            // 최대 결과
+            StringBuilder maxAlp = new StringBuilder();
             int max = 0;
 
+            // 모든 알파벳을 중앙으로 설정하여 탐색!
             for(int i = 0; i < ALP_SIZE; i++){
                 if(puzzle[i] == 0) continue;
                 char alp = (char) ('A'+i);
