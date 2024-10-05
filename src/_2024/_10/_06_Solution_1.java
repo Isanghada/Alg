@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
-// https://www.acmicpc.net/problem/
+// https://www.acmicpc.net/problem/1689
 // - 정렬 : 시작, 끝 지점을 각각 리스트에 추가하고, 정렬!
 //          시작 지점일 경우 겹치는 경우 증가, 끝 지점일 경우 겹치는 경우 감소!
 public class _06_Solution_1 {
