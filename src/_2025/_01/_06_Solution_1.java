@@ -37,7 +37,7 @@ public class _06_Solution_1 {
         int N = Integer.parseInt(in.readLine());
         
         // 전체 인원수
-        long total = 0;
+        long total = 1;
         
         // 도시 정보 입력
         City[] cities = new City[N];
