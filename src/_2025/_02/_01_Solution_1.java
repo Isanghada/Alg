@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
-import java.util.TreeSet;
 
 // https://www.acmicpc.net/problem/13902
 // - DP : 1. 가능한 웍의 크기 계산 -> 중복 제거를 위해 Set 활용
@@ -30,7 +30,7 @@ public class _01_Solution_1 {
         int[] S = Arrays.stream(in.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
         // 가능한 웍의 크기 Set : S를 활용해 가능한 모든 웍의 크기 계산
-        Set<Integer> set = new TreeSet<>();
+        Set<Integer> set = new HashSet<>();
         for(int i = 0; i < M; i++){
             set.add(S[i]);
             for(int j = i+1; j < M; j++) set.add(S[i] + S[j]);
@@ -51,14 +51,14 @@ public class _01_Solution_1 {
                 if(n + s > N) break;
                 // - 불가능한 개수인 경우 패스
                 if(dp[n] == MAX) continue;
-                
+
                 // 최소 요리 횟수 갱신
                 dp[s+n] = Math.min(dp[s+n], dp[n]+1);
             }
         }
 
         // 정답 입력
-        sb.append(dp[N]);
+        sb.append(dp[N] == MAX ? -1 : dp[N]);
         System.out.println(sb);
     }
 }
