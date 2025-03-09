@@ -3,7 +3,8 @@ package _2025._03;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/13707
 // - 참고 : https://jun-bae.tistory.com/27
@@ -20,13 +21,16 @@ public class _09_Solution_1 {
         int K = Integer.parseInt(st.nextToken());
 
         int[][] dp = new int[N+1][K+1];
-        dp[0][0] = 1;
+        Arrays.fill(dp[0], 1);
 
         for(int n = 1; n <= N; n++){
-            for(int k = 1; k <= K; k++){
+            dp[n][1] = 1;
+            for(int k = 2; k <= K; k++){
                 dp[n][k] = (dp[n][k-1] + dp[n-1][k]) % MOD;
             }
         }
+
+//        for(int[] d : dp) System.out.println(Arrays.toString(d));
 
         // 정답 출력
         sb.append(dp[N][K]);
