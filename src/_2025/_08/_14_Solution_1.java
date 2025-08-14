@@ -20,7 +20,10 @@ public class _14_Solution_1 {
 
         final int MAX = 3 * N;
         int[][] floyd = new int[N+1][N+1];
-        for(int n = 1; n <= N; n++) Arrays.fill(floyd[n], MAX);
+        for(int n = 1; n <= N; n++) {
+            Arrays.fill(floyd[n], MAX);
+            floyd[n][n] = 1;
+        }
 
         while(M-- > 0){
             st = new StringTokenizer(in.readLine());
@@ -40,6 +43,8 @@ public class _14_Solution_1 {
                 }
             }
         }
+
+        for(int n = 0 ; n <= N; n++) System.out.println(Arrays.toString(floyd[n]));
 
         int time = 0;
         int[] answers = new int[N+1];
