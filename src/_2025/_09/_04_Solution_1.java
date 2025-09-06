@@ -87,15 +87,7 @@ public class _04_Solution_1 {
     private static String getCommand(int countR, int countU, int[] infoR, int[] infoU) {
         StringBuilder target = new StringBuilder();
 
-        if(infoR[1] == 0) {
-            while (countR-- > 0) target.append('R');
-            while (countU-- > 0) target.append('U');
-        }else if(infoU[1] == 0){
-            countR -= infoR[1];
-            while(infoR[1]-- > 0) target.append('R');
-            while (countU-- > 0) target.append('U');
-            while (countR-- > 0) target.append('R');
-        }else{
+        if(infoR[0] == infoU[0]){
             countR -= infoR[1];
             countU -= infoU[1];
 
@@ -103,7 +95,16 @@ public class _04_Solution_1 {
             while(infoU[1]-- > 0) target.append('U');
             while(countR-- > 0) target.append('R');
             while(countU-- > 0) target.append('U');
+        }else if(infoR[0] > infoU[1]){
+            while(countR-- > 0) target.append('R');
+            while(countU-- > 0) target.append('U');
+        }else{
+            countR -= infoR[1];
+            while(infoR[1]-- > 0) target.append('R');
+            while(countU-- > 0) target.append('U');
+            while(countR-- > 0) target.append('R');
         }
+
         return target.toString();
     }
 
