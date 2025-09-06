@@ -61,9 +61,7 @@ public class _04_Solution_1 {
         }else if(moveY == 0){
             while(N-- > 0) ANSWER.append('R');
         } else{
-            for(int countR = 1; countR < N; countR++){
-                int countU = N - countR;
-
+            for(int countR = 1, countU = N - 1; countR < N; countR++, countU--){
                 int[] infoR = new int[]{moveX / countR, moveX % countR};
                 int[] infoU = new int[]{moveY / countU, moveY % countU};
 
@@ -95,7 +93,7 @@ public class _04_Solution_1 {
             while(infoU[1]-- > 0) target.append('U');
             while(countR-- > 0) target.append('R');
             while(countU-- > 0) target.append('U');
-        }else if(infoR[0] > infoU[1]){
+        }else if(infoR[0] > infoU[0]){
             while(countR-- > 0) target.append('R');
             while(countU-- > 0) target.append('U');
         }else{
